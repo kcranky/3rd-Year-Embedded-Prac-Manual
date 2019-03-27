@@ -1,0 +1,60 @@
+\section{Prac 1 - The First Project}
+This prac sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
+
+\subsection{Task 1 - Terminal}
+Start by SSH'ing into your Pi and create a folder called <your\_student\_number>
+Run the following commands, and take a screenshot after each command:
+\begin{itemize}
+    \item ls (must show the folder you just created)
+    \item ifconfig (etho0 must be visible)
+    \item lscpu (number of cores must be visible)
+\end{itemize}
+
+\subsection{Task 2 - Programming}
+In this task you will write a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up to eight, and then go back to 0.
+\begin{itemize}
+    \item Start by connecting to your Pi through VNC
+    \item In the appendices, read the Python Tips and tricks section to understand the commands and why they are used.
+    \item Open Geany (or another text editor of your choice), and create a copy of the template given to you. 
+    \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values. The )
+\end{itemize}
+
+\subsection{Task 3 - Bonus Tasks}
+These tasks are not for marks, but instead are given to allow you to learn more about the Raspberry Pi and networking. 
+\begin{itemize}
+    \item Use threading in your prac to trigger the counter update
+    \item Count up and then down, rather than just counting up and resetting to zero
+    \item Connect to Eduroam using wpa\_supplicant configuration
+    \item Create a two node cluster between two RPis with one master RPi telling the other slave RPi what to run. \textbf{TODO: Provide the students with commands to do this with explanations} 
+    \item Configure the Raspberry Pi as a WiFi hotspot, and connect your phone/another Pi to it.
+\end{itemize}
+
+\subsection{Deliverables}
+The following needs to be written up and attached to vula. Pleas submit a single file as a pdf. Other submissions will not be accepted.
+\begin{itemize}
+    \item Answers to the following questions:
+        \begin{enumerate}
+            \item What does ifconfig stand for? What does it show?
+            \item Define a headless RPI (2)
+            \item Explain the meaning of iface, eth0, inet, and static in detail. (4)
+            \item Explain the purpose of a subnet mask using the IP address 192.168.137.15 and subnet 255.255.255.0
+        \end{enumerate}
+    \item Your python script
+    \item Remember, if you want to achieve bonus marks, these need to be demonstrated to your tutor in your assigned lab session.
+\end{itemize}
+
+\subsection{Memo - To be hidden from report upon printing}
+\textbf{TODO: HIDE}
+Suggested answers to the questions are as follows:
+\begin{enumerate}
+    \item interface configuration. Shows interfaces connected to the system
+    \item No connected peripherals, controlled over a network or other connection
+    \item As follows:
+        \begin{itemize}
+            \item iface - interface. A physical interface such as an ethernet or WiFi port
+            \item eth0 - a name of an interface on the Raspberry Pi, specifically the first ethernet port
+            \item inet - the internet protocol stack, enables connection to the internet
+            \item static - In this context, refers to a pre-assigned/unchanging IP address, as opposed to a dynamic one set by a DHCP server
+        \end{itemize}
+    \item Distinguish what the subnet is and what the unique ID of the device is. Show understanding of the concept of bit-masking.
+\end{enumerate}

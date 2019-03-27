@@ -1,0 +1,29 @@
+\subsection{Downloading and Installing Raspbian}
+This section covers installation and configuration of the Raspberry Pi to run Raspbian Stretch. It is assumed that the user is running Windows, but the process will be similar for users of any operating system.
+
+\subsubsection{Prerequisites}
+\label{sec:Prereqs}
+\textbf{TODO: These resources are also available on Vula.}
+\begin{itemize}
+    \item Latest Rasbian Stretch with Desktop and Recommended Software image, available at\\ \href{https://www.raspberrypi.org/downloads/raspbian}{Raspberry Pi Foundation Website}
+    \item PuTTY (the full suite) available at\\ \href{https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html}{https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html}. \footnote{Some versions of Windows have the required SSH and SCP packages, but PuTTY has many other tools that are useful.}
+    \item SDFormatter, available at\\ \href{https://www.sdcard.org/downloads/formatter_4/eula_windows/index.html}{https://www.sdcard.org/downloads/formatter\_4/eula\_windows/index.html}
+    \item Etcher, an image writing tool, available at\\
+    \href{https://www.balena.io/etcher/}{https://www.balena.io/etcher/}
+\end{itemize}
+
+\subsubsection{Process}
+\label{sec:Process}
+\begin{enumerate}
+    \item Download Prerequisites 
+        Download the prerequisites, and install PuTTY, SDFormatter, and Etcher
+    \item Prepare SD Card\\
+        Insert the SD card into the computer. If you do not have a reader available, speak to a friend or tutor who does.
+    \item Write image to SD card\\
+        Open Etcher. Select the downloaded zip image, and the SD card, and format. At the end of format, it may read that it failed,  but don't worry. Upon completion, Windows will try to mount partitions on the SD card that it can't read. Just press "Cancel" and then "OK" to the dialog boxes that pop up. The boot partition is the only partition we will be dealing with.
+    \item Complete\\
+        If all you want to do is install Raspbian, you are now complete. It is recommended that you configure networking for SSH.
+\end{enumerate}
+
+\subsubsection{Testing}
+Once you've completed the installation process, including all relevant network configurations as laid out in \ref{sec:Prereqs}, \ref{sec:Process}, \ref{sec:Connectivity-Ethernet}, \ref{sec:Connectivity-ChangeComputerIP} and \ref{sec:SSH}, be sure to test your connection and configuration before the first lab by logging in to the Pi through SSH or VNC.

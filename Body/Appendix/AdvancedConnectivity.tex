@@ -1,0 +1,88 @@
+\section{Advanced Connectivity Options}
+\subsection{Setting a static IP Through Config}
+Once you've successfully SSH's into your Pi, it's a good idea to configure the networking options in the config files directly.
+
+Use a text editor to open /etc/dhcpcd.conf, and edit it to the following:
+\begin{verbatim}
+# Static IP profile for eth0
+profile static_eth0
+static ip_address=192.168.137.15/24
+static routers=
+static domain_name_servers=
+
+# Ethernet interface configuration 
+interface eth0
+inform 192.168.137.15
+fallback static_eth0
+
+# Wireless configuration
+interface wlan0
+\end{verbatim}
+
+\subsection{Providing your Pi with wireless Internet Access}
+There are two possible methods of this that will be presented, each with it's own advantages and disadvantages.
+\subsubsection{Using WiFi to Ethernet passthrough to give your Pi internet access}
+There may be a situation in which you want your Pi to work as an access point rather than using the WiFi interface to provide the Pi with internet access. In this situation, you need to get internet access through the ethernet port. If you're connected to Windows, you can use network sharing. Complete the following to enable network sharing:
+
+\begin{enumerate}
+    \item Right click on your network option in Windows taskbar
+    \item Select  "Open Network \& Internet Settings", on the lower right hand side of the screen.
+    \item Select "Change Adapted Options"
+    \item Right click on your WiFi network and select "Properties"
+    \item Click the "Sharing" tab, and enable the first checkbox
+\end{enumerate}
+This setting is what causes us to have to use the subnet 192.168.137.x.
+
+\subsubsection{Connecting to Eduroam}
+SSH into your pi and navigate to /etc/wpa\_supplicant/wpa\_supplicant.conf. Replace it's contents as follows:
+
+\begin{verbatim}
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+country=ZA
+update_config=1
+
+network={
+  ssid="eduroam"
+  scan_ssid=0
+  key_mgmt=WPA-EAP
+  pairwise=CCMP TKIP
+  group=CCMP TKIP
+  eap=PEAP
+  identity="student_number@wf.uct.ac.za"
+  password="password"
+  phase2="auth=MSCHAPv2"              
+}  
+\end{verbatim}
+
+\subsection{Debugging a WiFI connection}
+If you still cannot connect via WiFi, enter into a shell on the pi and run:
+\begin{verbatim}
+\$ journalctl -u wpa_supplicant
+\end{verbatim}
+
+This will output the log files and notify you of any incorrect configurations.
+
+\subsection{Configuring the Pi to Act as an Access Point}
+If you are hosting a server on the Raspberry Pi, or perhaps want to create a WiFi network for guests to connect to, the Pi can act as an access point to it's network. This section describes how to set up and configure the Pi as an access point.
+
+\textbf{TODO}
+
+%% UART
+\subsection{TTL over USB}
+This option allows you to use a USB to UART converter such as a FT232R or CP2102.
+Begin by removing the SD card, and insert it into a computer. Make the following changes on the boot partition:
+
+cmdline.txt
+\begin{verbatim}
+console=serial0,115200 
+\end{verbatim}
+
+
+config.txt
+\begin{verbatim}
+uart_enable=1
+dtoverlay=pi3-disable-bt
+\end{verbatim}
+
+Note that the Pi uses 3.3V logic levels. 
+

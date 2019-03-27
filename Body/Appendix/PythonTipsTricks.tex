@@ -1,0 +1,56 @@
+\section{Python Tips and Tricks}
+
+\subsection{The RPI.GPIO Library}
+The RPi.GPIO library is library used on the Raspberry Pi. 
+Documentation for the library can be found here:\\
+\href{https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/}{https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/}
+
+It is included in the environment variables by default, so, in order to use it, you can simply just import it:
+
+\begin{verbatim}
+    include RPi.GPIO as GPIO
+\end{verbatim}
+
+
+\subsection{Interrupts}
+\textbf{TODO}
+
+\subsection{Threading}
+\textbf{TODO}
+
+\newpage
+\subsection{Python Programming Template}
+\begin{lstlisting}
+#!/usr/bin/python3
+"""
+Python Practical Template
+Keegan Crankshaw
+Readjust this Docstring as follows:
+Names: <names>
+Student Number: <studnum>
+Prac: <Prac Num>
+Date: <dd/mm/yyyy>
+"""
+
+# import Relevant Librares
+import RPi.GPIO as GPIO
+
+# Logic that you write
+def main():
+    print("write your logic here")
+
+
+# Only run the functions if 
+if __name__ == "__main__":
+	# Make sure the GPIO is stopped correctly
+	try:
+	    while True:
+		    main()
+	except KeyboardInterrupt:
+		print("Exiting gracefully")
+		# Turn off your GPIOs here
+		GPIO.cleanup()
+	except:
+		print("Some other error occurred")
+
+\end{lstlisting}
