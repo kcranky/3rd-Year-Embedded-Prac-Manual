@@ -5,12 +5,56 @@ Being able to use the Unix Shell and terminal commands is an invaluable skill, a
 
 % Git
 \subsection{Git}
+\label{app:Git}
 Git is a powerful tool which is essential to managing and tracking your code. It essentially works as a version control system, allowing you to backup changes to your code at defined set points.
 
 Git is a local tool. To use online backups, it's recommended to use a remote (online) repository management tool. GitHub is recommended because, as a student, there are many benefits which you can access. See \href{https://education.github.com/pack}{https://education.github.com/pack} for signing up.
 
 Git can be intimidating in the beginning, but it becomes invaluable as you progress in software development. \href{https://swcarpentry.github.io/git-novice/}{This page} has a great guide you can follow to get well acquainted.
 
+\subsubsection{A Quick Git Get Go}
+\paragraph{Creating a GitHub account and configuring your computer appropriately}
+\begin{itemize}
+    \item Start by creating a GitHub account
+    \item Install git on your computer\\
+    If you're using a linux based system, this can be as simple as \verb|sudo apt-get install git|\\
+    If you're using Windows, you need to download and use an installer.
+    \item Once git is installed, run the following commands:\\
+    git config --global user.name "Your Name"\\
+    git config --glonbal user.email "github email address"
+    \item Git is now configured
+\end{itemize}
+
+\paragraph{Creating a New Project}\mbox{}\\
+Git consists of three primary stages: Untracked, staged and committed. Untracked files are not tracked by the repository. Staged files are files staged for commit but not yet committed. Committed files are "saved" to git.
+On your local system:
+\begin{itemize}
+    \item Create a folder and enter into it
+    \item Run \verb|git init|
+    \item Create a new text file, for example "test.txt"
+    \item Run \verb|git status|
+    \item You will see there is an untracked file. Add it to git by running \verb|git add test.txt|
+    \item It is possible to add all untracked files by running \verb|git add .|
+    \item If you run \verb|git status| again, you will see that "test.txt" has been staged, but not yet committed. Commit test.txt by running \verb|git commit -m "Created test.txt"|. The \verb|-m| flag is to include a git commit message. It's useful to use these messages to explain what has changed in this commit.
+\end{itemize}
+
+\paragraph{Linking GitHub and your Local Project}\mbox{}\\
+On GitHub, create a new repository and give it a meaningful name and description. Take note of the link (something like https://github.com/\textless username\textgreater /\textless project-name\textgreater .git)
+
+GitHub gives instructions on how to push an existing repository from the command line, but for completeness sake the commands are included here:
+\begin{verbatim}
+git remote add origin https://github.com/<username>/<project-name>.git
+git push -u origin master    
+\end{verbatim}
+
+If you refresh the GitHub page, you should now see your files and commits.
+
+\paragraph{Understanding .gitignore}\mbox{}\\
+Related SW Carpentry link: \href{https://swcarpentry.github.io/git-novice/06-ignore/index.html}{Ignoring Things}
+
+You may have seen the option to add a .gitginore when creating a new repository on GitHub. This is used to get Git to ignore certain files, such as interim or raw data files. 
+
+
 \subsection{A Brief Overview of Networks}
 \label{app:UnderstandingNetworks}
-It is useful to have a basic idea of how networks, IP adresses, and subnets work. For this, it it suggested you read \href{https://support.microsoft.com/en-za/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics}{this article} from Microsoft: \href{https://tinyurl.com/y2z8x9za}{https://tinyurl.com/y2z8x9za}
+It is useful to have a basic idea of how networks, IP addresses, and subnets work. For this, it it suggested you read \href{https://support.microsoft.com/en-za/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics}{this article} from Microsoft: \href{https://tinyurl.com/y2z8x9za}{https://tinyurl.com/y2z8x9za}

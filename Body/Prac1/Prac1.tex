@@ -1,7 +1,9 @@
 \section{Prac 1 - The First Project}
 This prac sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
 
-\subsection{Task 1 - Terminal}
+
+\subsection{Terminal}
+\label{sec:Prac1:Terminal}
 Start by SSH'ing into your Pi and create a folder called \textless your\_student\_number\textgreater\\
 Run the following commands, and take a screenshot after each command:
 \begin{itemize}
@@ -10,16 +12,18 @@ Run the following commands, and take a screenshot after each command:
     \item lscpu (number of cores must be visible)
 \end{itemize}
 
-\subsection{Task 2 - Programming}
+\subsection{Programming}
 In this task you will write a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up to eight, and then go back to 0.
+Be sure to use git to keep track of changes. For instructions on using git, take a look at Section \ref{app:Git}.
 \begin{itemize}
     \item Start by connecting to your Pi through VNC
     \item In the appendices, read the Python Tips and tricks section to understand the commands and why they are used.
-    \item Open Geany (or another text editor of your choice), and create a copy of the template given to you. 
-    \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values. The )
+    \item Open Geany (or another text editor of your choice), and create a copy of the template given to you in the appendix.
+    \item Test your GPIO pins by turning LEDs on and off without any iteration logic. You can use \textit{time.sleep()} from the time library to wait between turningg them on and off.
+    \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values.)
 \end{itemize}
 
-\subsection{Task 3 - Bonus Tasks}
+\subsection{Bonus Tasks}
 These tasks are not for marks, but instead are given to allow you to learn more about the Raspberry Pi and networking. 
 \begin{itemize}
     \item Use threading in your prac to trigger the counter update
@@ -30,7 +34,7 @@ These tasks are not for marks, but instead are given to allow you to learn more 
 \end{itemize}
 
 \subsection{Deliverables}
-The following needs to be written up and attached to vula. Pleas submit a single file as a pdf. Other submissions will not be accepted.
+The following needs to be written up and attached to vula. Please submit a single file as a pdf. Other submissions will not be accepted.
 \begin{itemize}
     \item Answers to the following questions:
         \begin{enumerate}
@@ -39,8 +43,9 @@ The following needs to be written up and attached to vula. Pleas submit a single
             \item Explain the meaning of iface, eth0, inet, and static in detail. (4)
             \item Explain the purpose of a subnet mask using the IP address 192.168.137.15 and subnet 255.255.255.0
         \end{enumerate}
+    \item The screenshots asked for in the Terminal tasks (Section \ref{sec:Prac1:Terminal})
     \item Your python script
-    \item Remember, if you want to achieve bonus marks, these need to be demonstrated to your tutor in your assigned lab session.
+    \item A link to the GitHub repository
 \end{itemize}
 
 \subsection{Memo - To be hidden from report upon printing}
@@ -58,3 +63,4 @@ Suggested answers to the questions are as follows:
         \end{itemize}
     \item Distinguish what the subnet is and what the unique ID of the device is. Show understanding of the concept of bit-masking.
 \end{enumerate}
+Student's code should be properly laid out and commented, as shown in the appendix. The GitHub repository should show at least 2 commits.
