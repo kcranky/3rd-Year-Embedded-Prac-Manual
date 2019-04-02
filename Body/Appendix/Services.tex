@@ -81,3 +81,16 @@ Raspbian comes installed with Real VNC but it needs to be enabled.
     \item Configure the Pi\\
     Upon first boot to desktop, you will be asked to configure some options on the raspberry pi. Simply hit next/skip through all of them as they will be configured at a later stage.
 \end{enumerate}
+
+\subsection{SCP}
+\label{sec:SCP}
+SCP or "Secure Copy" is a protocol that allows you to transfer files. \newline
+To transfer a file from your computer to your Raspberry Pi, run the following command. (This command assumes your Pi is located at IP 192.168.1.15 and the username is still the default "pi"
+\begin{verbatim}
+    $ scp <compiled_file_name> pi@192.168.1.15:
+\end{verbatim}
+On Windows, SCP may work out of the box but if it does not, make sure you have the full PuTTY suite installed (see Section \ref{sec:Prereqs}) and run the following:
+\begin{verbatim}
+    $ pscp <compiled_file_name> pi@192.168.1.15:
+\end{verbatim}
+After the colon in the above command you can set the directory where you want to copy the file to. If unset, it will simply copy to the home directory. \textbf{TODO Ensure this is true}
