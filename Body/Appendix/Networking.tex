@@ -6,8 +6,8 @@ There are many ways to interface with the Pi. This section will cover types of n
 \label{sec:Connectivity-Ethernet}
 This section will assign a static Ethernet address to the Raspberry Pi. This is useful for your first configuration.
 \begin{enumerate}
-    \item Insert the SD card into a computer and navigate to the BOOT partition
-    \item open "cmdline.txt" and append the following:
+    \item Insert the SD card into your computer and navigate to the BOOT partition
+    \item open "cmdline.txt" and append the following to the line (don't create a new line)
         \begin{verbatim}ip=192.168.137.15\end{verbatim} 
         This tells the Raspberry Pi to configure the Ethernet port to use the IP address 192.168.137.15
     \item Enable SSH as per Section \ref{sec:SSH}
@@ -41,7 +41,7 @@ To use the ping command, open a command promt window and type the following:
 
 If that host is unreachable (the Pi hasn't booted yet or is incorrectly configured), a message will show that the host is unreachable. If everything was correctly configured, you should get
 \begin{verbatim}
-             Reply from 192.168.137.15: bytes=32 time<1ns TTL=64
+    Reply from 192.168.137.15: bytes=32 time<1ns TTL=64
 \end{verbatim}
 
 This means your Pi and computer are both correctly configured. See section \ref{sec:SSH} for configuring your Pi for SSH access.

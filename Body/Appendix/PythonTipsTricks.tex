@@ -1,4 +1,8 @@
 \section{Python Tips and Tricks}
+\label{app:Python}
+This chapter contains some useful tips and tricks to writing good Python for embedded systems. You will also find the template you are required to use for your practicals, as well as how to make use of good practices, such as debouncing, or making use of the Raspberry Pi's multicore architecture by implementing threading.
+
+Python, while not as powerful as C, is quickly becoming a common choice for embedded systems developers due to its ease of use. \footnote{See \href{https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages}{https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages}}. 
 
 \subsection{The RPI.GPIO Library}
 The RPi.GPIO library is library used on the Raspberry Pi. 
@@ -11,14 +15,6 @@ It is included in the environment variables by default, so, in order to use it, 
     include RPi.GPIO as GPIO
 \end{verbatim}
 
-
-\subsection{Interrupts}
-\textbf{TODO}
-
-\subsection{Threading}
-\textbf{TODO}
-
-\newpage
 \subsection{Python Programming Template}
 \begin{lstlisting}
 #!/usr/bin/python3
@@ -54,3 +50,10 @@ if __name__ == "__main__":
 		print("Some other error occurred")
 
 \end{lstlisting}
+
+\subsection{Interrupts}
+\textbf{TODO}
+
+\subsection{Threading}
+\textbf{TODO}
+

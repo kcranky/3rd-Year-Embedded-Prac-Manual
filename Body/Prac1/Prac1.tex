@@ -1,10 +1,10 @@
-\section{Prac 1 - The First Project}
-This prac sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
+\section{Practical 1 - The First Project}
+This practical sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
 
 
 \subsection{Terminal}
 \label{sec:Prac1:Terminal}
-Start by SSH'ing into your Pi and create a folder called \textless your\_student\_number\textgreater\\
+Start by SSH'ing into your Pi and create a folder called \textless your\_student\_number\textgreater.\\
 Run the following commands, and take a screenshot after each command:
 \begin{itemize}
     \item ls (must show the folder you just created)
@@ -13,20 +13,20 @@ Run the following commands, and take a screenshot after each command:
 \end{itemize}
 
 \subsection{Programming}
-In this task you will write a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up to eight, and then go back to 0.
-Be sure to use git to keep track of changes. For instructions on using git, take a look at Section \ref{app:Git}.
+In this task you will develop a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up from 0 to 7, and then go back to 0.
+Be sure to use git to keep track of changes to your code. For instructions on using Git, take a look at Section \ref{app:Git}.
 \begin{itemize}
-    \item Start by connecting to your Pi through VNC
-    \item In the appendices, read the Python Tips and tricks section to understand the commands and why they are used.
+    \item Start by connecting to your Pi through VNC (see Section \ref{app:Services-VNC})
+    \item Read the Python Tips and tricks in Section \ref{app:Python} to gain understanding of the commands and why they are used.
     \item Open Geany (or another text editor of your choice), and create a copy of the template given to you in the appendix.
-    \item Test your GPIO pins by turning LEDs on and off without any iteration logic. You can use \textit{time.sleep()} from the time library to wait between turningg them on and off.
+    \item Test the GPIO pins of the RPi by turning LEDs on and off without any iteration logic. You can use \textit{time.sleep()} from the time library to wait between turning them on and off.
     \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values.)
 \end{itemize}
 
 \subsection{Bonus Tasks}
 These tasks are not for marks, but instead are given to allow you to learn more about the Raspberry Pi and networking. 
 \begin{itemize}
-    \item Use threading in your prac to trigger the counter update
+    \item Use threading in your prac to trigger the counter update (see Section \ref{app:Python})
     \item Count up and then down, rather than just counting up and resetting to zero
     \item Connect to Eduroam using wpa\_supplicant configuration
     \item Create a two node cluster between two RPis with one master RPi telling the other slave RPi what to run. \textbf{TODO: Provide the students with commands to do this with explanations} 
@@ -34,16 +34,16 @@ These tasks are not for marks, but instead are given to allow you to learn more 
 \end{itemize}
 
 \subsection{Deliverables}
-The following needs to be written up and attached to vula. Please submit a single file as a pdf. Other submissions will not be accepted.
+The following needs to be written up and attached to vula. Please submit a single file as a pdf. Other forms of submissions will not be accepted.
 \begin{itemize}
-    \item Answers to the following questions:
-        \begin{enumerate}
-            \item What does ifconfig stand for? What does it show?
-            \item Define a headless RPI (2)
-            \item Explain the meaning of iface, eth0, inet, and static in detail. (4)
-            \item Explain the purpose of a subnet mask using the IP address 192.168.137.15 and subnet 255.255.255.0
-        \end{enumerate}
-    \item The screenshots asked for in the Terminal tasks (Section \ref{sec:Prac1:Terminal})
+    % \item Answers to the following questions:
+    %     \begin{enumerate}
+    %         \item What does ifconfig stand for? What does it show?
+    %         \item Define a headless RPI (2)
+    %         \item Explain the meaning of iface, eth0, inet, and static in detail. (4)
+    %         \item Explain the purpose of a subnet mask using the IP address 192.168.137.15 and subnet 255.255.255.0
+    %     \end{enumerate}
+    % \item The screenshots asked for in the Terminal tasks (Section \ref{sec:Prac1:Terminal})
     \item Your python script
     \item A link to the GitHub repository
 \end{itemize}

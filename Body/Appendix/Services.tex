@@ -25,16 +25,16 @@ Once your pi is connected to the computer and you have ensured connection (see S
     \item You should now successfully connected to your Raspberry Pi via SSH
 \end{itemize}
 
-It is suggested you change the password. Type in 
+It is suggested you change the password to keep your implementation secure. You can change your password using the following command:
 \begin{verbatim}
     $ passwd
 \end{verbatim}
-to change it
 
 \subsection{VNC}
-In the previous section, control via SSH was introduced. but as mentioned, the Raspberry Pi can be used as a standalone desktop computer. However, it is a little impractical to carry around a screen and all the other required peripherals when you're working with your Pi. 
+\label{app:Services-VNC}
+In the previous section, control via SSH was introduced. As previously mentioned, the Raspberry Pi can be used as a standalone desktop computer. However, it is a little impractical to carry around a screen and all the other required peripherals when you're working with your Pi. 
 
-Raspbian comes installed with Real VNC but it needs to be enabled.
+There are various options for VNC servers. Raspbian comes installed with Real VNC but it needs to be enabled. Other options, such as tightVNC and ultraVNC also exist and can also be used. 
 
 \begin{enumerate}
     \item Activate Real VNC\\
