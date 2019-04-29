@@ -1,4 +1,6 @@
-\section{Practical 1 - The First Project}
+\section{Practical 1 - Git, Bash, GPIO}
+
+\subsection{During the Practical Session}
 This practical sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
 
 
@@ -12,7 +14,7 @@ Run the following commands, and take a screenshot after each command:
     \item lscpu (number of cores must be visible)
 \end{itemize}
 
-\subsection{Programming}
+\subsection{Programming Task 1}
 In this task you will develop a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up from 0 to 7, and then go back to 0.
 Be sure to use git to keep track of changes to your code. For instructions on using Git, take a look at Section \ref{app:Git}.
 \begin{itemize}
@@ -22,6 +24,9 @@ Be sure to use git to keep track of changes to your code. For instructions on us
     \item Test the GPIO pins of the RPi by turning LEDs on and off without any iteration logic. You can use \textit{time.sleep()} from the time library to wait between turning them on and off.
     \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values.)
 \end{itemize}
+
+\subsection{Programming Task 2}
+Using the code above, add some buttons to increment, decrement and reset the values on the LEDs. Make sure to use interrupts, as explained in Section \ref{app:Python}. Demonstrate this functionality to a tutor.
 
 \subsection{Bonus Tasks}
 These tasks are not for marks, but instead are given to allow you to learn more about the Raspberry Pi and networking. 
