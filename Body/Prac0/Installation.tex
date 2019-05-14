@@ -1,8 +1,11 @@
-\subsection{Downloading and Installing Raspbian}
-This section covers installation and configuration of the Raspberry Pi to run Raspbian Stretch. It is assumed that the user is running Windows, but the process will be similar for users of any operating system.
+\subsection{Setting up your Pi}
+In order to use the Pi you need to install an operating system on it and setup its networking.  The following will lead you through installing Raspberian as an operating system.  Raspberian  is a fork of the Debian distribution of the open source operating system Linux.  You will then configure the networking settings in Raspberian to allow you to access the Pi remotely using SSH.  
+
+It is assumed that the user is running Windows, but the process will be similar for users of any operating system.
 
 \subsubsection{Prerequisites}
 \label{sec:Prereqs}
+Download the following software applications and install them as indicated on their webpages
 \textbf{TODO: These resources are also available on Vula.}
 \begin{itemize}
     \item Latest Rasbian Stretch with Desktop and Recommended Software image, available at\\ \href{https://www.raspberrypi.org/downloads/raspbian}{Raspberry Pi Foundation Website}
@@ -12,18 +15,22 @@ This section covers installation and configuration of the Raspberry Pi to run Ra
     \href{https://www.balena.io/etcher/}{https://www.balena.io/etcher/}
 \end{itemize}
 
-\subsubsection{Process}
-\label{sec:Process}
+\subsection{Install and configure Raspberian}
 \begin{enumerate}
-    \item Download Prerequisites\\
-        Download the prerequisites, and install PuTTY, SDFormatter, and Etcher
-    \item Prepare SD Card\\
-        Insert the SD card into the computer. If you do not have a reader available, speak to a friend or tutor who does.
+    \item Insert the SD card into the computer. If you do not have a reader available, speak to a friend or tutor who does.
     \item Write image to SD card\\
         Open Etcher. Select the downloaded zip image, and the SD card, and format. At the end of format, it may read that it failed,  but don't worry. Upon completion, Windows will try to mount partitions on the SD card that it can't read. Just press "Cancel" and then "OK" to the dialog boxes that pop up. The boot partition is the only partition we will be dealing with.
-    \item Complete\\
-        If all you want to do is install Raspbian, you are now complete. It is recommended that you configure networking for SSH.
+    \item Boot\\
+    Insert SDCard into Pi and Plugin a screen and keyboard....
+    \item Configure\\
+    \begin{itemize}
+        \item Open a terminal (by.....) and run raspi-config..... and enable ssh, SPI, I2C, Serial, ....
+        \item Create a new user 
+        \item Add new user to sudoers
+    \end{itemize}
 \end{enumerate}
 
+\subsection{}
+
 \subsubsection{Testing}
-Once you've completed the installation process, including all relevant network configurations as laid out in \ref{sec:Prereqs}, \ref{sec:Process}, \ref{sec:Connectivity-Ethernet}, \ref{sec:Connectivity-ChangeComputerIP} and \ref{sec:SSH}, be sure to test your connection and configuration before the first lab by logging in to the Pi through SSH or VNC.
+Once you've completed the installation process, including all relevant network configurations as laid out in \ref{sec:Prereqs}, \ref{process}, \ref{sec:Connectivity-Ethernet}, \ref{sec:Connectivity-ChangeComputerIP} and \ref{sec:SSH}, be sure to test your connection and configuration before the first lab by logging in to the Pi through SSH or VNC.

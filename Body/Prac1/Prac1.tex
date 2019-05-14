@@ -6,6 +6,8 @@ This practical sets out to familiarise you with the Pi and complete a simple pro
 
 \subsection{Terminal}
 \label{sec:Prac1:Terminal}
+While there are many Graphic User Interfaces (GUI) available for various distributions of Linux including Raspberian, it is often necessary to operate an embedded system without a GUI given the limited processing and memory resources of the device.  Consequently it is important to learn to use Linux through the command line shell, a very common shell on many linux systems is known as Bash.  There is a lot to learn and a being comfortable with the command line will help you greatly in working with embedded systems,  The following will introduce the basics to you but if you have never used a Linux command line before we suggest you go through the following exercise in your own time  and if you are interested or have the time this 4hr online lesson will give you a very good grounding: https://swcarpentry.github.io/shell-novice/
+
 Start by SSH'ing into your Pi and create a folder called \textless your\_student\_number\textgreater.\\
 Run the following commands, and take a screenshot after each command:
 \begin{itemize}
@@ -19,10 +21,13 @@ In this task you will develop a simple 3-bit binary counter, the values of which
 Be sure to use git to keep track of changes to your code. For instructions on using Git, take a look at Section \ref{app:Git}.
 \begin{itemize}
     \item Start by connecting to your Pi through VNC (see Section \ref{app:Services-VNC})
+    \item Connect 3 LEDs and 2 Push buttons to the GPIO pins of the Pi following this circuit
     \item Read the Python Tips and tricks in Section \ref{app:Python} to gain understanding of the commands and why they are used.
     \item Open Geany (or another text editor of your choice), and create a copy of the template given to you in the appendix.
     \item Test the GPIO pins of the RPi by turning LEDs on and off without any iteration logic. You can use \textit{time.sleep()} from the time library to wait between turning them on and off.
     \item Write your logic (Hint: Look at \textit{itertools.product} to generate a list of binary values.)
+    \item push your working code to github
+    \item demonstrated operation to tutor and get signed off
 \end{itemize}
 
 \subsection{Programming Task 2}
@@ -31,11 +36,11 @@ Using the code above, add some buttons to increment, decrement and reset the val
 \subsection{Bonus Tasks}
 These tasks are not for marks, but instead are given to allow you to learn more about the Raspberry Pi and networking. 
 \begin{itemize}
+    \item Configure the Raspberry Pi as a WiFi hotspot, and connect your phone/another Pi to it and ping it.
     \item Use threading in your prac to trigger the counter update (see Section \ref{app:Python})
     \item Count up and then down, rather than just counting up and resetting to zero
     \item Connect to Eduroam using wpa\_supplicant configuration
     \item Create a two node cluster between two RPis with one master RPi telling the other slave RPi what to run. \textbf{TODO: Provide the students with commands to do this with explanations} 
-    \item Configure the Raspberry Pi as a WiFi hotspot, and connect your phone/another Pi to it.
 \end{itemize}
 
 \subsection{Deliverables}
