@@ -29,9 +29,9 @@ There may be a situation in which you want your Pi to work as an access point ra
     \item Select  "Open Network \& Internet Settings", on the lower right hand side of the screen.
     \item Select "Change Adapted Options"
     \item Right click on your WiFi network and select "Properties"
-    \item Click the "Sharing" tab, and enable the first checkbox
+    \item Click the "Sharing" tab, and enable the first checkbox \footnote{This setting is what causes us to have to use the subnet 192.168.137.x.}
 \end{enumerate}
-This setting is what causes us to have to use the subnet 192.168.137.x.
+
 
 \subsubsection{Connecting to Eduroam}
 SSH into your pi and navigate to /etc/wpa\_supplicant/wpa\_supplicant.conf. Replace it's contents as follows:

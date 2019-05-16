@@ -1,4 +1,8 @@
 \section{Networking on the Pi}
+\subsection{A Brief Overview of Networks}
+\label{app:UnderstandingNetworks}
+It is useful to have a basic idea of how networks, IP addresses, and subnets work. For this, it it suggested you read \href{https://support.microsoft.com/en-za/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics}{this article} from Microsoft: \href{https://tinyurl.com/y2z8x9za}{https://tinyurl.com/y2z8x9za}
+
 \label{app:NetworkingOnThePi}
 There are many ways to interface with the Pi. This section will cover types of network connectivity.
 
@@ -30,11 +34,23 @@ To change the IP of your Ethernet port on Windows 10, complete the following ste
     \item You have successfully changed the IP of the Ethernet card on your computer. It is suggested that you now ensure connectivity
 \end{itemize}
 
+\textbf{Ubuntu}\\
+To change the IP of your Ethernet port on Ubuntu, complete the following steps:
+\begin{itemize}
+    \item Click the network interface icon on the status bar and select Wired Settings
+    \item Click the options button
+    \item Select the IPv4 Tab, and change the IPv4 method to Manual
+    \item Under "Addresses" enter in the following:\\
+            - IP Address: 192.138.137.1\\
+            - Subnet Mask: 255.255.255.0
+    \item You can leave DNS blank
+\end{itemize}
+
 \subsection{Ensuring connectivity}
 \label{sec:Connectivity-EnsuringConnectivity}
 Sometimes you may want to debug your connection to the Pi. A fast way to do this is via the \textit{ping} command. \textit{Ping} sends a packet to a particular host (in this case the Pi), and measures the time taken for a response from that host. 
 
-To use the ping command, open a command promt window and type the following:
+To use the ping command, open a command promt window or terminal and type the following:
 \begin{verbatim}
     ping 192.168.137.15
 \end{verbatim}
@@ -45,3 +61,5 @@ If that host is unreachable (the Pi hasn't booted yet or is incorrectly configur
 \end{verbatim}
 
 This means your Pi and computer are both correctly configured. See section \ref{sec:SSH} for configuring your Pi for SSH access.
+
+\textbf{NB:} Don't be surprised if you can't ping a windows machine from your Pi. Windows blocks the specific type of packet required for a ping in the firewall

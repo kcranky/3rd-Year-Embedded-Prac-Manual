@@ -1,7 +1,6 @@
-\section{Services}
-\subsection{SSH}
+\section{SSH}
 \label{sec:SSH}
-\subsubsection{Enabling SSH}
+\subsection{Enabling SSH}
 If you have not connected to your Pi and configured it for SSH, you need to do so. SSH is disabled by default on new installations of Raspbian.
 
 To enable SSH, do the following:
@@ -12,7 +11,7 @@ To enable SSH, do the following:
     \item Your Pi will enable SSH upon next boot
 \end{enumerate}
 
-\subsubsection{Using SSH}
+\subsection{Using SSH}
 To use SSH on your Pi, you need to connect to the computer to a network. See Section \label{sec:Connectivity} on various ways that can be done (it is suggested to use Ethernet upon first connection).
 
 Once your pi is connected to the computer and you have ensured connection (see Section \ref{sec:Connectivity-EnsuringConnectivity}, use can log in to your Pi via SSH. To do so, do the following:
@@ -30,7 +29,7 @@ It is suggested you change the password to keep your implementation secure. You 
     $ passwd
 \end{verbatim}
 
-\subsection{VNC}
+\section{VNC}
 \label{app:Services-VNC}
 In the previous section, control via SSH was introduced. As previously mentioned, the Raspberry Pi can be used as a standalone desktop computer. However, it is a little impractical to carry around a screen and all the other required peripherals when you're working with your Pi. 
 
@@ -82,7 +81,7 @@ There are various options for VNC servers. Raspbian comes installed with Real VN
     Upon first boot to desktop, you will be asked to configure some options on the raspberry pi. Simply hit next/skip through all of them as they will be configured at a later stage.
 \end{enumerate}
 
-\subsection{SCP}
+\section{SCP}
 \label{sec:SCP}
 SCP or "Secure Copy" is a protocol that allows you to transfer files. \newline
 To transfer a file from your computer to your Raspberry Pi, run the following command. (This command assumes your Pi is located at IP 192.168.1.15 and the username is still the default "pi"

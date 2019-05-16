@@ -52,9 +52,8 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \subsection{Interrupts}
-\textbf{TODO}
-
-\subsection{Threading}
-\textbf{TODO}
-Note - Not required in new prac layouts?
+Adding an Interrupt in Python is as simple as:
+\begin{verbatim}
+    GPIO.add_event_detect(BTN_B, GPIO.RISING, method_on_interrupt)
+\end{verbatim}
 
