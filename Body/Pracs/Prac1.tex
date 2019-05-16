@@ -1,5 +1,5 @@
 \section{Practical 1 - Git, Bash, GPIO}
-
+\label{sec:Prac1}
 \subsection{During the Practical Session}
 This practical sets out to familiarise you with the Pi and complete a simple programming task. If you have not yet done so, complete Prac 0. Ensure that you can SSH into the pi, as all the tasks for this prac require it.
 
@@ -15,6 +15,15 @@ Run the following commands, and take a screenshot after each command:
     \item ifconfig (etho0 must be visible)
     \item lscpu (number of cores must be visible)
 \end{itemize}
+Your result should look something like this:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\columnwidth]{Figures/CMDOutput}
+\caption{Example output after running the above commands}
+\label{fig:CMDOutput}
+\end{figure}
+
+
 
 \subsection{Programming Task 1}
 In this task you will develop a simple 3-bit binary counter, the values of which will be placed on LEDs connected to the Pi. The value on the counter should change every 1 second, and should count up from 0 to 7, and then go back to 0.

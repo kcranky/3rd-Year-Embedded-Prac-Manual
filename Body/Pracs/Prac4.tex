@@ -1,0 +1,52 @@
+\newpage
+\section{Prac 4 - I2C and PWM}
+\label{sec:Prac4}
+\subsection{Overview}
+Something about why loading scripts on Pi on startup is useful. Something about RTCs and why they are useful (especially considering the Pi doesn't have one)
+
+\subsection{Pre-prac requirements}
+This section covers what you will need to know before starting the practical.
+\begin{itemize}
+    \item I2C
+    \item PWM
+    \item Knowledge about BASH as learnt in previous pracs
+\end{itemize}
+
+\subsection{Outcomes}
+You will learn about the following aspects:
+\begin{itemize}
+    \item I2C
+    \item Real Time Clocks
+    \item Starting a script on boot on the Raspberry Pi
+\end{itemize}
+
+\subsection{Deliverables}
+At the end of this practical, you must:
+\begin{itemize}
+    \item Demonstrate your working implementation to a tutor
+    \item Submit your code on Vula
+\end{itemize}
+
+\subsection{Hardware Required}
+\begin{itemize}
+    \item Raspberry Pi
+    \item SD Card
+    \item Ethernet Cable
+    \item Breadboard
+    \item Jumper wires
+    \item 2 x Buttons
+    \item RTC
+    \item 11 LEDs (4 for hours, 6 for minutes, 1 for seconds)
+    \item 11 Resistors for said LEDs
+\end{itemize}
+
+
+\subsection{Further Instructions}
+\textbf{Instructions to tutors:}
+\begin{itemize}
+    \item Flesh out all the sections in the guide
+    \item Complete this practical and write instructions for students
+    \item The time from the RTC should be displayed in binary format on the LEDs
+    \item The "seconds" LED should be at it's dimmest when the minute starts, and at it's brightest just before the minutes value increases (ie it should be min brightness at 0 seconds, and max brightness at 59.99 seconds)
+    \item One button should increase the hours value, another button increase the minutes value
+\end{itemize}

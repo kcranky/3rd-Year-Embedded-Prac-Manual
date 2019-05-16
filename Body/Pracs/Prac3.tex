@@ -1,0 +1,50 @@
+\newpage
+\section{Prac 3 - SPI and Threading}
+\label{sec:Prac3}
+\subsection{Overview}
+While the Pi does have an audio jack, it uses a purely PWM (pulse width modulation) based implementation for audio. Audiophiles among you may know that this is not a great way of playing audio. You can read more about the Raspberry Pi and it's audio jack \href{https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/}{here}.
+
+To improve audio quality, we can use a DAC (digital to analog converter). In this practical, you will pass sampled audio data over SPI to a 10 bit DAC for playback. 
+
+\subsection{Pre-prac requirements}
+This section covers what you will need to know before starting the practical.
+\begin{itemize}
+    \item Interrupts
+\end{itemize}
+
+\subsection{Outcomes}
+You will learn about the following aspects:
+\begin{itemize}
+    \item SPI
+    \item Threading
+\end{itemize}
+
+\subsection{Deliverables}
+At the end of this practical, you must:
+\begin{itemize}
+    \item Demonstrate your working implementation to a tutor
+    \item Submit your code on Vula
+\end{itemize}
+
+\subsection{Hardware Required}
+\begin{itemize}
+    \item Raspberry Pi
+    \item SD Card
+    \item Ethernet Cable
+    \item Breadboard
+    \item Jumper wires
+    \item X x Buttons (Depends on number of samples)
+    \item MCP4911 DAC Chip
+    \item Speaker to play sound (Supplied by lab?)
+\end{itemize}
+
+
+\subsection{Further Instructions}
+\textbf{Instructions to tutors:}
+\begin{itemize}
+    \item Flesh out all the sections in the guide
+    \item Complete this practical and write instructions for students
+    \item You must be able to press a button to play audio. 
+    \item Transfer to the DAC should happen on a second thread
+    \item If something is playing and another button is pressed, the new audio should be played (ie the current playing audio should be replaced by the new file)
+\end{itemize}

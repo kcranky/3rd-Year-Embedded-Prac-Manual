@@ -1,7 +1,54 @@
 \subsection{Mini Project A}
-Done by both Eng and CS Students. Should involve all (or as many as possible) previous aspects. Should preferably done in a RTOS.
+\label{sec:ProjA}
+
+\subsection{Overview}
+Your objective for Mini Project A is to design an environment logger. Add something about loggers in the environment, why the raspberry pi is usefult for this, etc.
+
+\subsection{Pre-Project Requirements}
+You will need to have completed all the previous practicals in order to complete this project.
+
+\subsection{Outcomes}
+In addition to creating a working system, you will learn about the following in this project:
 \begin{itemize}
-    \item Host an environment logger using everything in the previous pracs with the inclusion of a microphone (roughly R8) and an RTC using I2C.
-    \item Control a servo motor to make music based on MIDI messages
-    \item ...?
+    \item ADCs
+\end{itemize}
+
+\subsection{Deliverables}
+At the end of this practical, you must:
+\begin{itemize}
+    \item Demonstrate your working implementation to a tutor
+    \item Submit your report to Vula
+\end{itemize}
+
+\subsection{Hardware Required}
+\begin{itemize}
+    \item All hardware from previous pracs
+    \item 1 x Potentiometer
+    \item 1 x LDR
+    \item 1 x Temperature sensor (MCP9700A)
+    \item ADC (MCP3008)
+\end{itemize}
+
+
+\subsection{Walkthrough}
+\textbf{Instructions to tutors:}
+\begin{itemize}
+    \item Complete the project and draw up suitable instructions
+    \item Come up with a demonstration rubric and report rubric (look at last year's project)
+    \item The system should start on boot
+    \item The system should have hardcoded thresholds. When a value goes over a threshold, an alarm should sound. A button must be pressed to dismiss the alarm.
+    \item By default, the system continuously monitors the sensors every 500ms using this format:
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    RTC Time & System Timer & Pot   & Temp & Light \\ \hline
+    10:17:15 & 00:00:00     & 0.5 V & 25 C & 10 \% \\ \hline
+    10:17:20 & 00:00:05     & 1.5 V & 25 C & 15 \% \\ \hline
+    \end{tabular}
+    \end{table}
+    \item The reset switch resets the timer and clean the console
+    \item The frequency switch changes the frequency of the monitoring. The possible frequencies are 500ms, 1s, 2s. The frequency must loop between those values per event occurrence.
+    \item The stop switch stops or starts the monitoring of the sensors. The timer is not affected by this functionality.
+    \item The display switch displays the first five reading since the stop switch was pressed.
 \end{itemize}

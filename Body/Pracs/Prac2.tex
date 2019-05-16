@@ -1,0 +1,55 @@
+\newpage
+\section{Prac 2 - Python vs. C}
+\label{sec:Prac2}
+
+\subsection{Overview}
+This practical will show you the importance of C for embedded systems development. 
+
+\subsection{Pre-prac Requirements}
+This section covers what you will need to know before starting the practical.
+\begin{itemize}
+    \item Cross compilation
+    \item Makefiles
+    \item Introduction to benchmarking concepts (not looking at only one benchmark, hot boards, etc)
+    \item Introduction to cache warming and good testing methodology (multiple runs, wall clock time, speed up)
+\end{itemize}
+
+\subsection{Outcomes}
+You will learn about the following aspects:
+\begin{itemize}
+    \item Heterodyning
+    \item Benchmarking
+    \item Latex
+    \item Bit widths (too much?)
+    \item Compiler flags (too much?)
+    \item Instruction sets (will be required for floating and compiler flags eg \$cat /proc/cpuinfo)
+\end{itemize}
+
+\subsection{Deliverables}
+At the end of this practical, you must:
+\begin{itemize}
+    \item Submit a 3 page report in IEEE-Conference style detailing your investigation
+\end{itemize}
+
+\subsection{Hardware Required}
+\begin{itemize}
+    \item Raspberry Pi
+    \item SD Card
+    \item Ethernet Cable
+\end{itemize}
+
+\subsection{Further Instructions}
+\textbf{Instructions to tutors:}
+\begin{itemize}
+    \item Further develop the prac overview to give a short blurb on heterodyning (it's use, etc)
+    \item Develop C and Python code for heterodyning
+    \item Include the guides for cross compilation as listed in the appendix
+    \item Decide on an independent variable for testing the implementation (bit width maybe? 16 vs 32 vs 64 bit floating point by setting C compiler flags? Or decide if just testing C and python is enough)
+    \item Write up the walkthrough section of this practical and adapt any other sections of this prac
+    \item Link to Overleaf and a guide on how to get the IEEE conference template (new project -\textgreater  from template -\textgreater  etc)
+\end{itemize}
+
+
+Not sure if the following  is too much but I've included it anyway in case the tutors decide it's doable given the nature of the prac:\\
+Prac 2 should be be a mathematical benchmark comparison, using floating vs fixed point math, dealing with compiler optimizations for C and hardware level support for the RPi. Students are also exposed to instruction sets (\$cat /proc/cpuinfo), compiler flags (-mfp16-format=ieee, setting HW floating point compiler directives such as fpv4, vfpv3, vfpv3xd, etc).
+
