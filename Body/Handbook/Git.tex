@@ -1,0 +1,54 @@
+% Git
+\section{Git}
+\label{sec:Git}
+Throughout the course you will be required to write and submit code and other files to an online git repository.  Git is a popular version control application that allows you to keep a record of changes you have made to text based files over time.  Additionally, by using a version controlled repository that is accessible to other collaborators, it provides a powerful way for many people to collectively build a larger system.  Almost all open source projects use a version control system to enable them to work with anyone else around the world in a structured and organised manner.  There are many platforms that offer free hosting services where you are able to share repositories, Github, and Gitlab are 2 such options.  Making an account on either of these (or a similar alternative) allows you to: (1) keep track of your own projects and the changes you make to them, (2) work collaboratively with team mates if you choose to share your repositories with them, and (3) is an increasingly common way of sharing a portfolio of your prior work with potential employers.
+
+Git is a local tool. To use online backups, it's recommended to use a remote (online) repository management tool. GitHub is recommended because, as a student, there are many benefits which you can access. See \href{https://education.github.com/pack}{https://education.github.com/pack} for signing up.
+
+Git can be intimidating in the beginning, but it becomes invaluable as you progress in software development. \href{https://swcarpentry.github.io/git-novice/}{This page} has a great guide you can follow to get well acquainted.
+
+Before arriving at Prac 1, make sure you have created a demo repository on a computer and pushed it to the cloud using the instructions found below.
+
+\subsection{A Quick Git Get Go}
+\subsubsection{Creating a GitHub account and configuring your computer appropriately}
+\begin{itemize}
+    \item Start by creating a GitHub account
+    \item Install git on your computer\\
+    Lab computers already have git installed.\\
+    If you're using a linux based system, this can be as simple as \verb|sudo apt-get install git|\\
+    If you're using Windows, you need to download and use an installer.
+    \item Once git is installed, run the following commands:\\
+    Note: Do not do this on the lab computers. If you are on a lab computer, rather set the user.name and user.email parameters from within the created git repository, and do not use the \--\--global flag.\\
+    git config \--\--global user.name "Your Name"\\
+    git config \--\--global user.email "github email address"
+    \item Git is now configured
+\end{itemize}
+
+\subsubsection{Creating a New Project}
+Git consists of three primary stages: Untracked, staged and committed. Untracked files are not tracked by the repository. Staged files are files staged for commit but not yet committed. Committed files are "saved" to git.
+On your local system:
+\begin{itemize}
+    \item Create a folder and enter into it
+    \item Run \verb|git init|
+    \item Create a new text file, for example "test.txt"
+    \item Run \verb|git status|
+    \item You will see there is an untracked file. Add it to git by running \verb|git add test.txt|
+    \item It is possible to add all untracked files by running \verb|git add .|
+    \item If you run \verb|git status| again, you will see that "test.txt" has been staged, but not yet committed. Commit test.txt by running \verb|git commit -m "Created test.txt"|. The \verb|-m| flag is to include a git commit message. It's useful to use these messages to explain what has changed in this commit.
+\end{itemize}
+
+\subsubsection{Linking GitHub and your Local Project}
+On GitHub, create a new repository and give it a meaningful name and description. Take note of the link (something like https://github.com/\textless username\textgreater /\textless project-name\textgreater .git)
+
+GitHub gives instructions on how to push an existing repository from the command line, but for completeness sake the commands are included here:
+\begin{verbatim}
+git remote add origin https://github.com/<username>/<project-name>.git
+git push -u origin master    
+\end{verbatim}
+
+If you refresh the GitHub page, you should now see your files and commits.
+
+\subsubsection{Understanding .gitignore}
+Related SW Carpentry link: \href{https://swcarpentry.github.io/git-novice/06-ignore/index.html}{Ignoring Things}
+
+You may have seen the option to add a .gitginore when creating a new repository on GitHub. This is used to get Git to ignore certain files, such as interim or raw data files. 
