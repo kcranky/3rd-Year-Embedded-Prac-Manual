@@ -10,13 +10,14 @@ This section covers what you will need to know before starting the practical.
 \end{itemize}
 
 \subsection{Outcomes}
-You will learn about the following aspects:
+You will learn about the following topics:
 \begin{itemize}
     \item SSH
     \item VNC
     \item Git
     \item Bash
     \item Basic GPIO usage
+    \item Interrupts
 \end{itemize}
 
 \subsection{Deliverables}
@@ -42,14 +43,14 @@ At the end of this practical, you must:
 \subsection{Walkthrough}
 \subsubsection{Terminal Task}
 \label{sec:Prac1:Terminal}
-While there are many Graphic User Interfaces (GUI) available for various distributions of Linux including Raspbian, it is often necessary to operate an embedded system without a GUI given the limited processing and memory resources of the device.  Consequently it is important to learn to use Linux through the command line shell, a very common shell on many linux systems is known as Bash.  There is a lot to learn and a being comfortable with the command line will help you greatly in working with embedded systems,  The following will introduce the basics to you but if you have never used a Linux command line before we suggest you go through the following exercise in your own time  and if you are interested or have the time this 4hr online lesson will give you a very good grounding: https://swcarpentry.github.io/shell-novice/
+While there are many Graphic User Interfaces (GUI) available for various distributions of Linux including Raspbian, it is often necessary to operate an embedded system without a GUI given the limited processing and memory resources of the device.  Consequently it is important to learn to use Linux through the command line shell, a very common shell on many linux systems is Bash.  There are many systems learn and a being comfortable with the command line will help you greatly in working with embedded systems.  The following will introduce the basics to you but if you have never used a Linux command line before we suggest you go through the following exercise in your own time  and if you are interested or have the time this 4hr online lesson will give you a very good grounding: https://swcarpentry.github.io/shell-novice/
 
 Start by SSH'ing into your Pi and create a folder called \textless your\_student\_number\textgreater.\\
 Run the following commands, and take a screenshot after each command:
 \begin{itemize}
-    \item ls (must show the folder you just created)
-    \item ifconfig (etho0 must be visible)
-    \item lscpu (number of cores must be visible)
+    \item \$ ls (must show the folder you just created)
+    \item \$ ifconfig (etho0 must be visible)
+    \item \$ lscpu (number of cores must be visible)
 \end{itemize}
 Your result should look something like this:
 \begin{figure}[H]

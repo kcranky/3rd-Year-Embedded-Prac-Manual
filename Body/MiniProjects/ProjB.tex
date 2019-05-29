@@ -1,10 +1,16 @@
 \subsection{Mini Project B}
 For CS Students only
-
-Blynk must be used to :
 \begin{itemize}
-    \item Control and set thresholds
-    \item View live logging information
-    \item be notified of alarms
-    \item dismiss alarms
+    \item Should be 2 credits of work. This translated to 20 hours to work
+    \item Suggested timeline\\
+    - Preparation, learning new knowledge and skills: 4 hours\\
+    - Doing the work for the practical: 12 hours\\
+    - Writing up for submission: 4 hours
+    \item Please ask the students to write up the requirements and how the software will be tested to assess if each requirement is met or not.
 \end{itemize}
+
+For this task, two Raspberry Pi's are required.\\
+One is to act as an MQTT broker, publishing the data gathered as per Mini Project A.\\
+The second is to act as an MQTT client that is subscribed to the first Pi and can be used to configure thresholds and display data using Node Red. A webpage must be hosted on the second Pi, and it's WiFi interface should be turned into an access point. Devices should be able to connect to this access point, and view the web page.
+
+Essentially, this is a repeat of the first project, but using a second Raspberry Pi with MQTT and Node Red as opposed to Blynk.
