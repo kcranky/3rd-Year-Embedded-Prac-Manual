@@ -1,23 +1,21 @@
 \newpage
-\section{Prac 4 - I2C and PWM}
-\label{sec:Prac4}
+\section{Prac 4 - SPI and Threading}
 \subsection{Overview}
-Something about why loading scripts on Pi on startup is useful. Something about RTCs and why they are useful (especially considering the Pi doesn't have one)
+While the Pi 3B+ does have an audio jack, it uses a purely PWM (pulse width modulation) based implementation for audio. Audiophiles among you may know that this is not a great way of playing audio. You can read more about the Raspberry Pi and it's audio jack \href{https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/}{here}.
+
+To improve audio quality, we can use a DAC (digital to analog converter). In this practical, you will pass sampled audio data over SPI to a 10 bit DAC for playback. 
 
 \subsection{Pre-prac requirements}
 This section covers what you will need to know before starting the practical.
 \begin{itemize}
-    \item I2C
-    \item PWM
-    \item Knowledge about BASH as learnt in previous pracs
+    \item Read the \href{http://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf}{MCP4911 Datasheet}
 \end{itemize}
 
 \subsection{Outcomes}
 You will learn about the following aspects:
 \begin{itemize}
-    \item I2C
-    \item Real Time Clocks
-    \item Starting a script on boot on the Raspberry Pi
+    \item SPI
+    \item Threading
 \end{itemize}
 
 \subsection{Deliverables}
@@ -34,19 +32,13 @@ At the end of this practical, you must:
     \item Ethernet Cable
     \item Breadboard
     \item Jumper wires
-    \item 2 x Buttons
-    \item RTC
-    \item 11 LEDs (4 for hours, 6 for minutes, 1 for seconds)
-    \item 11 Resistors for said LEDs
+    \item X x Buttons (Depends on number of samples)
+    \item MCP4911 DAC Chip
+    \item Speaker to play sound (Supplied by lab?)
 \end{itemize}
 
 
 \subsection{Further Instructions}
-\textbf{Instructions to tutors:}
 \begin{itemize}
-    \item Flesh out all the sections in the guide
-    \item Complete this practical and write instructions for students
-    \item The time from the RTC should be displayed in binary format on the LEDs
-    \item The "seconds" LED should be at it's dimmest when the minute starts, and at it's brightest just before the minutes value increases (ie it should be min brightness at 0 seconds, and max brightness at 59.99 seconds)
-    \item One button should increase the hours value, another button increase the minutes value
+    \item If you didn't in Prac 0, enable SPI in raspi-config
 \end{itemize}

@@ -46,7 +46,30 @@
 %-------------------------------------------------------------------------------
 \setlength{\parskip}{1em}
 \input{Preamble/TablesAndFigures}
-\input{Preamble/Listings}
 \input{Preamble/HyperRef}
 \setcounter{secnumdepth}{4}
 %-------------------------------------------------------------------------------
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{%
+  language=[LaTeX]TeX,
+  backgroundcolor=\color{gray!25},
+  basicstyle=\ttfamily,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% \usepackage{titlesec}
+% \titlespacing{\section}{0pt}{\parskip}{-\parskip}
+% \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+% \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{longtable}
+\usepackage{multicol}

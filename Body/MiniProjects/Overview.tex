@@ -1,9 +1,19 @@
-\section{Mini Projects}
-The mini project is a chance for you to use what you have learnt in this course and test your problem solving skills.
+\section{Mini Projects - EnviroLogger}
+\textbf{Scenario}\\
+A biology student has approached you with the task of monitoring their private greenhouse. They request that you monitor time of day, time since the system has been running, light levels, temperature, and humidity. They have a device that monitors humidity. It outputs an analog voltage between 0 and 3.3V. If it goes over 70\%, they want an alarm to go off. You decide to use a potentiometer to mimic the humidity sensor. With the experience you've gained working with the Raspberry Pi over the past few months, you decide that this is a good option to test out your skills.
 
-The projects use everything learnt in the previous practicals - so here's hoping you paid attention and remembered!
+The biology student has a computer in their greenhouse that they use to play music to their plants as a part of their research, so they are able to access the Raspberry Pi on location through a terminal or VNC. However, they wish to be able to also monitor the data remotely. They say their younger brother, who plays with Arduinos, has spoken a lot about Blynk for IoT devices. You decide to look into these options for remote monitoring. 
 
-All students need to do Mini Project A. Only CS students need to do Mini Project B.
+\textbf{Overview}\\
+Your objective for Mini Project A and B is to design an environment logger. An environment logger interacts with the world around it by measuring any number of factors from GPS location to air pollution. While a single one is useful to monitor a location, many can be scattered around an area to monitor patterns.
+
+Project A and B differ in how that data is presented to end users. Project A will require use of a single Raspberry Pi, which relays data to an app on your phone created through Blynk.
+
+Project B requires two Raspberry Pis. Instead of using Blynk, one Pi works as the environment sensor. It will send the gathered data using a protocol called MQTT to a node red server, which will be hosted on the second Raspberry Pi. Users should be able to log in to a hot spot hosted on the second Raspberry Pi and access the Node Red server to see the data being captured.
+
+The mini project is a chance for you to use what you have learnt in this course and test your problem solving skills. The projects use everything learnt in the previous practicals - so here's hoping you paid attention and remembered! All students need to do Mini Project A. Only CS students need to do Mini Project B.
+
+The objective of these mini projects is to get some experience on what it might be like to create and deploy a real IoT device - what the pracs in the course have been leading up to!
 
 \input{Body/MiniProjects/ProjA}
 \input{Body/MiniProjects/ProjB}
