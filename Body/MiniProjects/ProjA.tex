@@ -1,15 +1,18 @@
-\subsection{Mini Project A}
+\subsection{Mini-Project A}
 \label{sec:ProjA}
 This project examines ELO5.2, which requires the student to develop a representative embedded system. It requires hardware/software interfacing, so an ADC is samples by software, and processing operations are applied. 
 
 \subsubsection{Pre-Project Requirements}
-You will need to have completed all the previous practicals in order to complete this project.
+\begin{itemize}
+    \item You will need to have completed all the previous practicals in order to complete this project.
+    \item You should be prepared to manage your time well to complete your design, implementation, and write up in due time.
+\end{itemize}
 
 \subsubsection{Outcomes}
 In addition to creating a working system, you will learn about the following in this project:
 \begin{itemize}
-    \item ADCs
-    \item Blynk
+    \item ADC - MCP3008
+    \item \href{https://blynk.io/}{Blynk}
 \end{itemize}
 
 \subsubsection{Deliverables}
@@ -45,7 +48,7 @@ Figure \ref{fig:SystemOverview} shows the system overview for the mini project.
 
 \begin{multicols}{2}
 Figure \ref{fig:blynkexample} shows an example of what the app you create in Blynk might look like.
-As you can see there's a terminal for accessing the output of the print statements, three values as read from the ADC, and an indicator to indicate if the alarm has gone off.
+As you can see there's a terminal for accessing the output of the print statements, three values as read from the ADC, and an indicator to indicate if the alarm has gone off. There are various widgets in Blynk. It's suggested you play with your energy budget to develop the most intuitive design and aesthetically pleasing design possible.
 \vfill\null
 \columnbreak
 \begin{figure}[H]
@@ -58,10 +61,7 @@ As you can see there's a terminal for accessing the output of the print statemen
 
 
 \subsubsection{Hardware requirements}
-You need to do the following:
-\begin{itemize}
-    \item Create the required circuit for the project
-\end{itemize}
+You will need to build your design and demonstrate it to the marker.
 
 \subsubsection{Software requirements}
 You need to do the following:
@@ -69,7 +69,7 @@ You need to do the following:
     \item Set up the RTC using the Raspberry Pi's supplied kernel driver for an RTC
     \item Create a thread for for reading from the ADC. The value read from the temperature sensor needs to be converted to degrees Celsius. See the datasheet for the formula.
     \item Create interrupts for all the button functionality (don't forget to debounce your inputs)
-    \item Create an alarm signal. You can flash an LED using a slow PWM signal, you can play audio through the DAC, or you can buy a buzzer from WhiteLab. 
+    \item Create an output signal to notify the biology student that there is an issue. You can flash an LED using a slow PWM signal, you can play audio through the DAC, or you can buy a buzzer from WhiteLab. 
     \item In the main() loop, print values to the screen as described in Section \ref{sec:ProjDescription}
 \end{itemize}
 
@@ -101,7 +101,7 @@ You need to do the following:
 \subsubsection{Marking Guide}
 \label{sec:ProjAMarks}
 \begin{longtable}[c]{|l|l|l|}
-\caption{}
+\caption{Project A marking Guide}
 \label{tbl:flamarks}\\
 \hline
 \textbf{Heading} & \textbf{Report} & \textbf{Demo} \\ \hline
