@@ -6,13 +6,13 @@ The biology student appreciates the work you have done developing a rough protot
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\columnwidth]{Figures/NodeRed}
+\includegraphics[width=1\columnwidth]{Figures/NodeRed}
 \caption{Project B System Overview}
 \label{fig:NodeRed}
 \end{figure}
 
 \subsubsection{Overview}
-For this task, two Raspberry Pi's are required.One is to act as an MQTT broker, publishing the data gathered as per Mini Project A. The second is to act as an MQTT client that is subscribed to the first Pi and can be used to configure thresholds and display data using Node Red. A web page must be hosted on the second Pi, and it's WiFi interface should be turned into an access point. Devices should be able to connect to this access point, and view the web page.
+For this task, two Raspberry Pis are required. Both are required to publish and subscribe to data. One Pi must publish the recorded data, and subscribe to an alarm dismissal signal. A second Pi should publish an alarm dismissal message and subscribe to the data collected by the first Pi. A web page must be hosted on the second Pi, and it's WiFi interface should be turned into an access point. Devices should be able to connect to this access point, and view a web page which can mimic the Blynk App designed in Mini-Project A. For the MQTT broker, you can use a \href{https://diyprojects.io/8-online-mqtt-brokers-iot-connected-objects-cloud/}{publicly available one}, or host one on one of the Pis.
 
 Essentially, this is a repeat of the first project, but using a second Raspberry Pi with MQTT and Node Red as opposed to Blynk.
 
